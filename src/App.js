@@ -26,7 +26,7 @@ class App extends Component {
       `https://api.github.com/search/users?q=${text}&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
       );
 
-    this.setState({user: res.data, loading:false});
+      this.setState({ users: res.data.items, loading: false });
   }
 
   // Get single Github user
